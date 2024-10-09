@@ -1,0 +1,112 @@
+<!--     
+<div class="col">
+
+    <div class="card">
+        <div class="image">
+            <img src="http://localhost:8080/images/{{laptop.photo}}" class="card-img-top" alt="Laptop Image">
+
+        </div>
+                <div class="card-body">
+                    <div class="real-body">
+
+                        <h5 class="card-title text-black" style="color: #181818; margin: 1px 0 0; font-size: 1.0625rem; height: auto; line-height: 1.4;letter-spacing: normal;font-family: 'Ubuntu', sans-serif;">{{laptop.brand}}</h5>
+                        <p class="card-text">Windows 11 &#9642; {{laptop.processor}} &#9642; {{laptop.gpu}}  &#9642; {{laptop.ram}} GB &#9642; {{laptop.storage}} GB &#9642; {{laptop.screen}} ""</p>
+                        <p class="card-price">Price: <span class="text-black">${{laptop.price}}</span></p>
+                    </div>
+                    <button class="btn  text-primary" (click)="readMore()">VIEW DETAILS</button>
+                    <button class="btn btn-primary " style="background-color: #0275d8;" (click)="addtocart(laptop)">Add to cart</button>
+
+                </div>
+    </div>
+</div>  
+ -->
+
+
+
+
+    
+<div class="col" style="font-size: larger">
+
+    <div class="card" style="height: fit-content;">
+        <div class="image">
+            <img src="http://localhost:8080/images/{{laptop.photo}}" class="card-img-top" alt="Laptop Image">
+
+        </div>
+        <div style="display: flex;justify-content: center">
+            <img src="/assets/images/monthfree.png" style="width: 100px;">
+        </div>
+                <div class="card-body" style="height: fit-content;">
+                    <p class="sc" style="color: #4d4d4d;  line-height: 1.2;;">{{laptop.screen}}"</p>
+                    <div class="real-body">
+
+                        <h5 class="card-title text-black br " style="color: #181818; margin: 1px 0 0; height: auto;font-size: 1em; letter-spacing: normal; ">{{laptop.brand}}</h5>
+                        <div class="gray-line"></div>
+                        <p style="color: black;">Prix</p>
+                        <p style="font-weight: 500; color: black; font-family: 'TT';font-size: 1.2em;">${{laptop.price}}</p>
+                        <div class="gray-line"></div>
+
+                        <ul style="color: #4d4d4d;">
+                            <li>Windows 11 Pro for business</li>
+                            <li>{{laptop.processor}}</li>
+                            <li>{{laptop.gpu}}</li>
+                            <li>{{laptop.ram}} GB</li>
+                            <li>{{laptop.storage}} GB</li>
+                            <li>{{laptop.screen}}"</li>
+                            <li>Thunderbolt™ 4 USB-C®</li>
+
+                          </ul>
+                                                  <!-- <p class="card-price">Price: <span class="text-black">${{laptop.price}}</span></p> -->
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <button class="btn btn-primary " style="background-color: #0275d8; display: block; text-align: center; width: 90%;border-radius: 4px;" (click)="addtocart(laptop)">Add to cart</button>
+                        <button class="btn" (click)="readMore()" style="display: block;  width: 90%;border-radius: 4px; border: solid .5px #0275d8 ;margin-top: .5em; color: #0275d8;">VIEW DETAILS</button>
+                    </div>
+
+                </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="col">
+
+    <div class="card" style="width: 252px;">
+        <div >
+            <img src="http://localhost:8080/images/{{laptop.photo}}" class="card-img-top" alt="Laptop Image">
+
+        </div>
+        <div style="color: #4d4d4d; margin-left: 3px; font-size: 1.0625rem; line-height: 1.2;;" >
+            {{laptop.screen}}"
+        </div>
+        <div>
+            <p style="color: #181818; margin: 1px 0 0; font-size: 1.0625rem; height: auto; line-height: 1.4;letter-spacing: normal;font-family: 'Ubuntu', sans-serif;
+            ">{{laptop.brand}}</p>
+
+        </div>
+        <div class="border-top my-3"></div>
+        <div style="color: #4d4d4d; margin-left: 3px; font-size: 1.0625rem; line-height: 1.2;;" >
+            Prix
+        </div>
+        <p style="color: #181818; margin: 1px 0 0; font-size: 1.0625rem; height: auto; line-height: 1.4;letter-spacing: normal;font-family: 'Ubuntu', sans-serif;
+        ">${{laptop.price}}</p>
+-
+                <div class="card-body">
+                    <div class="real-body">
+
+                        <h5 class="card-title text-black">{{laptop.brand}}</h5>
+                        <p class="card-text">Windows 11 &#9642; {{laptop.processor}} &#9642; {{laptop.gpu}}  &#9642; {{laptop.ram}} GB &#9642; {{laptop.storage}} GB &#9642; {{laptop.screen}} ""</p>
+                        <p class="card-price">Price: <span class="text-black">${{laptop.price}}</span></p>
+                    </div>
+                    <button class="btn  text-primary" (click)="readMore()">VIEW DETAILS</button>
+                    <button class="btn btn-primary " style="background-color: #0275d8;" (click)="addtocart(laptop)">Add to cart</button>
+
+                </div> -->
+    <!-- </div>
+</div>    --> 

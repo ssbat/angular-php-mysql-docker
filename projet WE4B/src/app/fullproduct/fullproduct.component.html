@@ -1,0 +1,73 @@
+
+ <br>
+ <br>
+ <br>
+
+
+ <div class = "card-wrapper">
+    <div class = "card">
+      <!-- card left -->
+      <div class = "product-imgs">
+        <div class = "img-display">
+          <div class = "img-showcase">
+            <img  src="http://localhost:8080/images/{{product.photo}}" alt = "shoe image">
+          </div>
+        </div>
+        
+      </div>
+      <!-- card right -->
+      <div class = "product-content">
+        <h3 class = "product-title">{{product.brand}}</h3>
+        <div class = "product-rating">
+          <i class = "fas fa-star"></i>
+          <i class = "fas fa-star"></i>
+          <i class = "fas fa-star"></i>
+          <i class = "fas fa-star"></i>
+          <i class = "fas fa-star-half-alt"></i>
+          <span>4.7(21)</span>
+        </div>
+
+        <div class = "product-price">
+          <p class = "last-price">Old Price: <span>$3257.00</span></p>
+          <p class = "new-price">New Price: <span>${{product.price}} </span></p>
+        </div>
+
+        <div class = "product-detail">
+          <p>Conçu pour vous permettre de rester productif et vous distraire où que vous soyez, l'ordinateur portable {{product.brand}}  de 39,6 cm ({{product.screen}}”) de diagonale offre des performances fiables et un écran large, qui vous permettent de regarder du contenu en streaming, de surfer et d’enchaîner les tâches du matin au soir.</p>
+          <ul>
+            <li>Processor: <span>{{product.processor}}</span></li>
+            <li>Ram: <span>{{product.ram}} GB</span></li>
+            <li>Storage: <span>{{product.storage}}GB Disque SSD</span></li>
+            <li>Screem: <span>{{product.screen}}inches, FHD (1920 x 1080)</span></li>
+            <li>Card Graphic: <span>{{product.gpu}}</span></li>
+            <li> Webcam:<span> IR et Full HD avec microphone</span></li>
+            <li> Batterie:<span> 4 cellules Li-Polymère, 57 Wh</span></li>
+          </ul>
+        </div>
+
+        <div class = "purchase-info">
+            <div class="buttons d-flex flex-row mt-5 gap-3 align-items-center">	<button class="btn btn-outline-dark">Buy Now</button>	<button class="btn btn-dark" (click)="addtocart(product)">Add to Basket</button>	</div>
+
+        </div>
+
+        <div class = "social-links">
+          <p style="margin: 0;">Share At: </p>
+          <a >
+            <i class = "fab fa-facebook-f"></i>
+          </a>
+          <a >
+            <i class = "fab fa-twitter"></i>
+          </a>
+          <a >
+            <i class = "fab fa-instagram"></i>
+          </a>
+          <a>
+            <i class = "fab fa-whatsapp"></i>
+          </a>
+          <a >
+            <i class = "fab fa-pinterest"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>

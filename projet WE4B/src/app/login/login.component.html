@@ -1,0 +1,25 @@
+<section class="main-section">
+    <div class="container"> 
+       <div class="user signinbox"> 
+           <div class="imagebox"> 
+               <img src="https://imgur.com/5y6Y6Gx.jpg"> 
+           </div> 
+           <div class="formbox">
+                <div class="form"> 
+                   <h2>Signin</h2>
+                    <input type="text" placeholder="email" [(ngModel)]="signinObj.email">
+                     <input type="password" placeholder="Password" [(ngModel)]="signinObj.password"> 
+                     <button (click)="submit()" value="Login"> Login</button>
+                     <p class="signup-text">Don't have an account? <a href="#" onClick="toggleform();">
+                       Signup</a>
+                   </p> 
+                </div>
+           </div>
+       </div>
+    </div>
+                
+
+
+              
+       
+</section>

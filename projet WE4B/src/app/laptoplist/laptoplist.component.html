@@ -1,0 +1,56 @@
+<img style="width: 100%;;" class="offre"  src="./assets/images/offre.png" routerLink="/products/122">
+<div class="d-flex  align-items-center justify-content-between p-3">
+
+    <div>
+        {{ getStartIndex() }}-{{ getEndIndex() }} out of {{ getTotalResults() }} results
+
+    </div>
+    <div class="combobox" >
+      <select class="form-control-mb-12" (change)="trier($event)">
+          <option selected="true" disabled="disabled">Choose Sort</option>    
+          <option value="cr" ><b>Sort</b>Prix croissant </option>
+          <option value="pr"><b>Sort</b>Prix Decroissant</option>
+        <!-- <option value="option3">Option 3</option> -->
+      </select>
+    </div>
+             
+          
+
+</div>
+
+
+<div class="row  row-cols-xl-3 row-cols-lg-2 row-cols-md-1    ">
+        <app-laptop *ngFor="let laptopVar of displayedProducts; "  [laptop]="laptopVar" (callParentFunction)="addtocart($event)" (callParentFunction2)="flashList() ">
+        </app-laptop>
+    
+</div>
+
+<!-- <div class="pagination">
+  <button [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">Previous</button>
+  <span>{{ currentPage }}</span>
+  <button [disabled]="currentPage === totalPages" (click)="onPageChange(currentPage + 1)">Next</button>
+</div> -->
+<div class="pagination_rounded d-flex justify-content-center">
+  
+      
+      <button  [disabled]="currentPage === 1" class="prev" [ngStyle]="{ 'color':currentPage === 1 ? '#5d5d5d' : '#007BFF'}"  (click)="onPageChange(currentPage - 1)"> <i class="fa fa-angle-left" aria-hidden="true"></i> Prev </button>
+      
+      <span style="margin: 0 1em;">{{currentPage}}</span>
+      
+      <button  class="prev"  [disabled]="currentPage === totalPages"   [ngStyle]="{ 'color':currentPage === totalPages ? '#5d5d5d' : '#007BFF'}" (click)="onPageChange(currentPage + 1)"> Next <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+    
+  
+</div>
+<!-- <button (click)="flashList()">Click me</button> -->
+
+<div class="flash-container">
+  <ul class="flash-list" [@flashAnimation]="flashState">
+    <li class="flash-item flash-item--success">
+      <!-- <i class="fa fa-times flash-icon-close"></i> -->
+      <h2 class="flash-title">Success!</h2>
+      <p class="flash-description">Your product has been added to cart.</p>
+      <i class="fa fa-check flash-icon"></i>
+      <!-- <a href="#" class="btn btn--continue ">Continue</a> -->
+    </li>
+  </ul>
+</div>

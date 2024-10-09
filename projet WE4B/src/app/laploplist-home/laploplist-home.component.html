@@ -1,0 +1,8 @@
+<div class="content">
+    <h2>Meilleures ventes !</h2>
+    <div class="row  row-cols-lg-3 row-cols-md-1 justify-content: space-around">
+        <app-laptop-home *ngFor="let laptopVar of filteredProducts"  [laptop]="laptopVar" >
+        </app-laptop-home>
+    </div>
+</div>
+

@@ -1,0 +1,106 @@
+<div>
+    <div class="container">
+
+    <div class="card card0">
+      <div class="d-flex flex-lg-row flex-column-reverse">
+        <div *ngIf="!showReplacement" class="card card1">
+          <div class="row d-flex px-lg-4 px-3 pt-3">
+            <h6 id="logo"><strong>lapShop</strong></h6>
+          </div>
+          <div class="row justify-content-center my-auto">
+            <div class="col-lg-8 my-5">
+              <h3 class="mb-3">Get your free LapShop account now.</h3>
+              <!-- <small class="text-muted">Try Hotjar BUSINESS free for 15 days<br>Downgrade to Basic (Free Forever) anytime.</small> -->
+  
+              <div class="form-group mt-5">
+                <input type="text" id="name" class="form-control" [(ngModel)]="CreateUser.name" required>
+                <label class="form-control-placeholder" for="name">Full Name</label>
+              </div>
+  
+              <div class="form-group mt-5">
+                <input type="text" id="name" class="form-control" [(ngModel)]="CreateUser.email" required>
+                <label class="form-control-placeholder" for="name">Email</label>
+              </div>
+              <div class="form-group mt-5">
+                <input type="text" id="name" class="form-control" [(ngModel)]="CreateUser.password" required>
+                <label class="form-control-placeholder" for="name">Password</label>
+              </div>
+  
+              <div class="row justify-content-center my-3">
+                <button class="btn btn-gray" (click)="submit()">Sign up</button>
+              </div>
+  
+              <div class="row justify-content-center my-2">
+                <!-- <small class="text-muted">or</small> -->
+              </div>
+            </div>
+          </div>
+          <div class="bottom text-center mb-3">
+            <a  class="sm-text mx-auto mb-3" (click)="showReplacement = true" style="cursor: pointer;">Already have an account?</a>
+          </div>
+        </div>
+        <div class="card card2" *ngIf="!showReplacement">
+          <img id="image" src="https://i.imgur.com/JayQIc8.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <div *ngIf="showReplacement"  [ngClass]="{'slide': true, 'slide-enter': showReplacement, 'slide-leave': !showReplacement}" class="container px-4 py-5 mx-auto replaced">
+
+     <div class="card card0">
+      <div class="d-flex flex-lg-row flex-column-reverse">
+        <div *ngIf="showReplacement" class="card card1">
+          <div class="row d-flex px-lg-4 px-3 pt-3">
+            <h6 id="logo"><strong>hotjar</strong></h6>
+          </div>
+          <div class="row justify-content-center my-auto">
+            <div class="col-lg-8 my-5">
+              <h3 class="mb-3">Sign in.</h3>
+              <!-- <small class="text-muted">Try Hotjar BUSINESS free for 15 days<br>Downgrade to Basic (Free Forever) anytime.</small> -->
+  
+     
+  
+              <div class="form-group mt-5">
+                <input type="text" id="name" class="form-control" [(ngModel)]="SignUser.email" required>
+                <label class="form-control-placeholder" for="name">Email</label>
+              </div>
+              <div class="form-group mt-5">
+                <input type="text" id="name" class="form-control" [(ngModel)]="SignUser.password" required>
+                <label class="form-control-placeholder" for="name">Password</label>
+              </div>
+  
+              <div class="row justify-content-center my-3">
+                <button class="btn btn-gray" (click)="submit2()">Sign In</button>
+              </div>
+  
+              <div class="row justify-content-center my-2">
+                <!-- <small class="text-muted">or</small> -->
+              </div>
+            </div>
+          </div>
+          <div class="bottom text-center mb-3">
+            <a  class="sm-text mx-auto mb-3" (click)="showReplacement =!showReplacement " style="cursor: pointer;">Already have an account?</a>
+          </div>
+        </div>
+        <div class="card card2">
+          <img id="image" src="https://i.imgur.com/JayQIc8.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="flash-container">
+    <ul class="flash-list" [@flashAnimation]="flashState">
+      <li class="flash-item flash-item--success">
+        <!-- <i class="fa fa-times flash-icon-close"></i> -->
+        <h2 class="flash-title">Success!</h2>
+        <p class="flash-description">Your account has been created!.</p>
+        <i class="fa fa-check flash-icon"></i>
+        <!-- <a href="#" class="btn btn--continue ">Continue</a> -->
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,26 @@
+<div class="card" style="width: 20rem;">
+  <div class="container-promo">
+    <div class="label-top">PROMOTION</div>
+  </div>
+  <img class="card-img-top" src="{{laptop.photo}}" alt="Card image cap"> <!--{{laptop.photo}}-->
+  <div class="card-body">
+    <h5 class="card-title">{{laptop.brand}}</h5> <!--{{laptop.brand}}-->
+    <div class="container-price">
+        <p class="price-with-promo">{{laptop.price | number}} €</p>
+        <p class="price-without-promo">{{3000 | number}} €</p>  
+        <p class="economy"> Economisez {{laptop.price - 3000 | number}} €</p> 
+    </div>
+    <div class="container-informations">
+      <ul>
+        <li class="gpu-informations">{{laptop.gpu}}</li> <!--{{laptop.gpu}}-->
+        <li class="os-informations">Windows 11 Home</li>   
+        <li class="cpu-informations"> Intel Core {{laptop.processor}}-9700K</li>     <!--{{laptop.cpu}}-->
+        <li class="ram-informations">{{laptop.ram}} Go DDR4</li>
+        <!--Ajouter des informations ici-->
+      </ul>
+    </div>
+    <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+    <!-- <a  id="btn-buy" class="btn btn-primary">Acheter</a> -->
+    <a routerLink="/products/{{laptop.id}}" id="btn-informations" class="btn btn-secondary">En savoir plus</a>
+  </div>
+</div>

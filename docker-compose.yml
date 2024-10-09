@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  angular:
+    build: ./projet WE4B
+    ports:
+      - "4200:80"
+    depends_on:
+      - php
+
+  php:
+    build: ./php-backend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./php-backend:/var/www/html
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: we4b_projet
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+networks:
+  default:
+    driver: bridge

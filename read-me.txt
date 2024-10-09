@@ -1,0 +1,20 @@
+
+my-project/
+├── angular-app/
+├── php-backend/
+├── docker-compose.yml
+└── mysql/
+
+
+
+docker exec -it <php-container-name> bash
+
+
+to create image and run it
+docker-compose up --build
+
+
+to connect to mysql
+docker exec -it <mysql-container-name> mysql -u root
+
+to creates tables etc..

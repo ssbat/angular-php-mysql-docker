@@ -1,0 +1,248 @@
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    text-align: left;
+}
+/* .plus:before {
+    content: "+ ";
+  }
+  
+  .minus:before {
+    content: "- ";
+  }
+   */
+.panel{
+
+    margin-bottom: 5px;
+}
+
+.panel-title{
+
+        margin-bottom: .0rem;
+}
+
+.panel-collapse{
+        background: #fff;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.panel-heading {
+    padding: 0;
+    border: 0;
+    padding: 9px 3px !important;
+}
+
+.panel-body{
+        padding: 13px;
+}
+
+.panel-title>a,
+.panel-title>a:active {
+    display: block;
+    padding: 10px;
+    color: #165DBA;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    
+
+}
+.panel-heading a .toggle-icon:before {
+    content: "+";
+    font-size: 2em;
+    float: right;
+    transition: all 0.5s;
+  }
+  
+  .panel-heading a.collapsed .toggle-icon:before {
+    content: "-";
+  }
+
+.panel-default>.panel-heading {
+    color: #282b2f;
+    background-color: #ffffff !important;
+        border-bottom: 1px solid #d5d5d5;
+}
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: -8.66667px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000
+}
+.option-input:hover {
+    background: #9faab7
+}
+
+.option-input:checked {
+    background: #2874ef
+}
+
+.option-input:checked::before {
+    /* height: 24px;
+    width: 24px;
+    position: absolute;
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-size: 14.66667px;
+    text-align: center;
+    line-height: 26px */
+}
+
+/* .option-input:checked::after {
+    -webkit-animation: click-wave 0.15s;
+    -moz-animation: click-wave 0.15s;
+    animation: click-wave 0.15s;
+    background: #E91E63;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100
+} */
+
+.option-input.radio {
+    border-radius: 50%
+}
+
+.option-input.radio::after {
+    border-radius: 50%
+}
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    float: left;
+    margin-left: -4px !important;
+    margin-top: 9px
+}
+
+input[type="checkbox"]:focus {
+    outline: thin dotted #333;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px
+}
+.ml-10 {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #2c3038;
+    font-size: 1rem;
+
+}
+
+.btn.btn-out {
+    outline: 1px solid #fff;
+    outline-offset: -5px
+}
+
+.btn {
+    border-radius: 2px;
+    text-transform: capitalize;
+    font-size: 11px;
+    padding: 10px 19px;
+    cursor: pointer;
+    color: #fff
+}
+
+.fa {
+    font-size: 12px;
+    color: #fff
+}
+
+
+
+
+
+
+
+
+
+
+
+.test{
+    border-right: 1px solid #d5d5d5;
+    height: 100%;
+}
+
+
+
+
+/* filter applied */
+
+.filtre-s{
+    color: #767676;
+  }
+  .filtre-p{
+    font-size:  1rem;
+    margin-bottom: 1em;
+
+  }
+  .reset-p{
+    color: #165DBA;
+    font-family: 'Geologica', sans-serif;
+    text-decoration: none;
+    margin-left: 0.5em;
+/* font-family: 'Montserrat', sans-serif; */
+  }
+  .reset-p::after{
+    
+    content: " ✖";
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: large;
+  }
+.reset-p:hover::after{
+  opacity: 1;
+
+}
+.title-filtre{
+    margin-top: 4px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    color: #165DBA;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #165DBA;
+    cursor: pointer;
+    
+    margin-bottom: 2em;
+
+
+    
+}
+.title-filtre:hover{
+    color: #397fda;
+    border: 1px solid #397fda;
+    transition:  0.5s ease;
+    padding: 6px 14px;
+
+
+
+}
+.titre-filtre{
+    font-family: 'Roboto', sans-serif;
+    font-size:  1.2rem;
+}

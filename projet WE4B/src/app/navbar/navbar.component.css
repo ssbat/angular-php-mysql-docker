@@ -1,0 +1,96 @@
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    /* display: block; */
+    text-align: center;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+
+}
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+
+.special{
+    color: black;
+    font-weight: 400;
+}
+.main-navbar{
+    border-bottom: 1px solid #ccc;
+}
+.main-navbar .top-navbar{
+    background-color: #2874f0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.main-navbar .top-navbar .brand-name{
+    color: #fff;
+}
+.main-navbar .top-navbar .nav-link{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.main-navbar .top-navbar .dropdown-menu{
+    padding: 0px 0px;
+    border-radius: 0px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+.main-navbar .top-navbar .dropdown-menu .dropdown-item i{
+    width: 20px;
+    text-align: center;
+    color: #2874f0;
+    font-size: 14px;
+}
+.main-navbar .navbar{
+    padding: 0px;
+    background-color: #ddd;
+}
+.main-navbar .navbar .nav-item .nav-link{
+    padding: 8px 20px;
+    color: #000;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-navbar .top-navbar .nav-link .icon-res{
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    
+}
+.icons{
+    width: fit-content;
+}
+.last{
+    margin: 0;
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='0' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+ .navbar-toggler, .navbar-toggler-icon:focus{
+    outline:none;
+    /* --box-shadow-color: palegoldenrod; */
+
+    border:0.2px solid white;
+    /* box-shadow: var(--box-shadow-color); */
+
+    box-shadow: none;
+  }
+
+  @import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+
+
+
+
+

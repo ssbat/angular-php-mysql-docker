@@ -1,0 +1,55 @@
+@import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+
+input{
+    display: inline-block;
+}
+
+.container{
+    width: 387px;
+    height: 147px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    border-radius: 10px;
+    
+}
+
+.container span{
+    font-size:20px;
+    text-align: center;
+}
+.container .form{
+    display: flex;
+    width: 366px;
+}
+
+.container .form label{
+    display: inline-block;
+    height: 50px;
+    width: 400px;
+    border: 3px solid #d3d2d2;
+    display: block;
+    color: #dbdbdb;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 29px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 800;
+    margin-top: .5em;
+}
+.container .form input{
+    appearance: none;
+}
+
+.container .form input:checked +label{
+    border-color: #2a93ec;
+    color: #2a93ec;
+}
+.pointd{
+    
+}

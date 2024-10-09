@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "laptopimages": {
+      "hosting": {
+        "projet": [
+          "laptopimages"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "laptopimages"
+  }
+}

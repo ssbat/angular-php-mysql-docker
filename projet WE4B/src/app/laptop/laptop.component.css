@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/assets/fonts/MyriadProRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TT';
+  src: url('/assets/fonts/TTNormsProMedium.otf') format('opentype');
+}
+
+
+
+.card {
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 310px;
+    /* height: 500px; */
+    /* height: 600px; */
+  }
+  .card img{
+    /* height: 300px; */
+  }
+  .image{
+    height: 280px;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  .card-price {
+    font-weight: bold;
+    color: black;
+  }
+  .card{
+    margin:  0 auto 2em auto;
+  }
+  .real-body{
+    /* height: 150px; */
+  }
+  button{
+
+    font-size: .8em;
+  }
+  .btn-test{
+    margin-left:-5em;
+    /* width: 135px; */
+    /* margin: 0; */
+  }
+.sc{
+  font-family: "CustomFont";
+}
+
+
+.br{
+  font-family: "TT";
+}
+
+
+.br:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+  .gray-line {
+    display: flex;
+    justify-content: center;
+    border-top: .5px solid #DCDCDC;
+    margin: .5em auto;
+  }
+  .card {
+    height: fit-content;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    max-height: 70%;
+}
+
+.card.expanded {
+    height: auto;
+}
+
+.card-body {
+    height: 70%;
+    transition: height 0.3s ease;
+    overflow: hidden;
+}
+
+.card-body.show-more {
+    height: auto;
+}
+
+.content {
+    transition: height 0.3s ease;
+    overflow: hidden;
+    max-height: 70%;
+}
+
+.content.expanded {
+    height: auto;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.btn-show-less {
+    display: none;
+}
+
+

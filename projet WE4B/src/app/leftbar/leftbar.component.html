@@ -1,0 +1,164 @@
+
+
+
+
+
+<div class="wrapper center-block hidden-xs test">
+ <div class="d-flex justify-content-between">
+  <div class="titre-filtre">
+    Trier et Filtrer
+  </div>
+   <div class="filtre-p">
+     {{numberOfFilters}} <span class="filtre-s">FILTRE APPLIED</span><a  (click)="reset()" class="reset-p" role="button"  *ngIf="numberOfFilters>0"> RESET ALL</a>
+   </div>
+
+ </div>
+  <div class="d-flex flex-wrap" >
+    <span class="title-filtre" *ngFor="let title of listFiltersProperName " (click)="removeFilter(title)">{{title}} X</span>
+  </div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading1">
+          <h4 class="panel-title">
+            <a [ngClass]="{'collapsed': isCollapsed}"  data-bs-toggle="collapse" href="#collapse1" role="button" aria-expanded="false" aria-controls="collapseExample" (click)="toggleCollapse(1)">
+              <span class="toggle-icon"></span> Processors
+            </a>
+          </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="heading1" >
+          <div class="panel-body">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="processor[]" value="I3" (change)="onChange($event)" [(ngModel)]="isChecked[0]" />
+                <span class="ml-10">CORE i3</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="processor[]" value="I5" (change)="onChange($event)" [(ngModel)]="isChecked[1]" />
+                <span class="ml-10">CORE i5</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="processor[]" value="I7" (change)="onChange($event)" [(ngModel)]="isChecked[2]" />
+                <span class="ml-10">CORE i7</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading3">
+          <h4 class="panel-title">
+            <a [ngClass]="{'collapsed': isCollapsed2}" data-bs-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapseExample" (click)="toggleCollapse(2)">
+              <span class="toggle-icon"></span> Price
+            </a>
+          </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="heading3" >
+          <div class="panel-body">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="price[]" value="350-649" (change)="onChange($event)" [(ngModel)]="isChecked[3]" />
+                <span class="ml-10">350-649</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="price[]" value="650-999" (change)="onChange($event)" [(ngModel)]="isChecked[4]"/>
+                <span class="ml-10">650-999</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="price[]" value="1000-1399" (change)="onChange($event)" [(ngModel)]="isChecked[5]"/>
+                <span class="ml-10">1000-1399</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="price[]" value="1400-9999" (change)="onChange($event)" [(ngModel)]="isChecked[6]"/>
+                <span class="ml-10">1400-9999</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading3">
+          <h4 class="panel-title">
+            <a [ngClass]="{'collapsed': isCollapsed3}" data-bs-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapseExample" (click)="toggleCollapse(3)">
+              <span class="toggle-icon"></span> RAM
+            </a>
+          </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="heading3">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="ram[]" value="8" (change)="onChange($event)" [(ngModel)]="isChecked[7]"/>
+                <span class="ml-10">8</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="ram[]" value="16" (change)="onChange($event)" [(ngModel)]="isChecked[8]"/>
+                <span class="ml-10">16</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="ram[]" value="32" (change)="onChange($event)" [(ngModel)]="isChecked[9]" />
+                <span class="ml-10">32</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading4">
+          <h4 class="panel-title">
+            <a [ngClass]="{'collapsed': isCollapsed4}" data-bs-toggle="collapse" href="#collapse4" role="button" aria-expanded="false" aria-controls="collapseExample" (click)="toggleCollapse(4)">
+              <span class="toggle-icon"></span> Screen
+            </a>
+          </h4>
+        </div>
+        <div id="collapse4" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="heading4">
+          <div class="panel-body">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="screen[]" value="13" (change)="onChange($event)"[(ngModel)]="isChecked[10]" />
+                <span class="ml-10">13</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="screen[]" value="15" (change)="onChange($event)"[(ngModel)]="isChecked[11]" />
+                <span class="ml-10">15</span>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" class="option-input checkbox" name="screen[]" value="17" (change)="onChange($event)" [(ngModel)]="isChecked[12]"/>
+                <span class="ml-10">17</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</div>
+
+
+
+
+
+
+
+<!-- 
+<button (click)="applyFilter()">Filter</button>
+<button (click)="applyFilter2()">Reset</button>  -->

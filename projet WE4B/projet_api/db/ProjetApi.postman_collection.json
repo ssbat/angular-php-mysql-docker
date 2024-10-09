@@ -1,0 +1,117 @@
+{
+	"variables": [],
+	"info": {
+		"name": "LaptopsApi",
+		"_postman_id": "08b23845-6f5d-cb42-3c16-dc748c8fb699",
+		"description": "Projet WE4B",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "View All Laptops",
+			"request": {
+				"url": "http://localhost:8080/view.php",
+				"method": "GET",
+				"header": [],
+				"body": {
+					
+				},
+				"description": "View All Laptops"
+			},
+			"response": []
+		},
+		{
+			"name": "View  Laptop ID",
+			"request": {
+				"url": "http://localhost:8080/viewFilter.php",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+					{
+						"key": "filter",
+						"value": "1",
+						"type": "text"
+					},
+				
+						{
+							"key": "filter",
+							"value": "2",
+							"type": "text"
+						}
+					]
+					
+			
+					
+				},
+				"description": "View All Laptops"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Laptop",
+			"request": {
+				"url": "http://localhost:8080/create.php",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "brand",
+							"value": "Lenovo",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "600",
+							"description": "",
+							"type": "number"
+						},
+						{
+							"key": "screen",
+							"value": "15",
+							"description": "",
+							"type": "integer"
+						},
+						{
+							"key": "processor",
+							"value": "Intel I5",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ram",
+							"value": "16",
+							"description": "",
+							"type": "integer"
+						},
+						{
+							"key": "gpu",
+							"value": "Intel Iris",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "storage",
+							"value": "256",
+							"description": "",
+							"type": "integer"
+						},
+						{
+							"key": "photo",
+							"value": "./assets/images/",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Create Laptop"
+			},
+			"response": []
+		}
+		
+	]
+}

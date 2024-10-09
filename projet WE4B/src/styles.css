@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.title{
+    /* color: black; */
+    margin: 1.5em;
+}
+hr{
+    width: 50%;
+    margin: 3.5em auto !important;
+
+}
+body{
+    height:100vh;
+}

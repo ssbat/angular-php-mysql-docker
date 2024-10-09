@@ -1,0 +1,153 @@
+.combobox {
+    position: relative;
+    width: 200px;
+  }
+  
+  .combobox select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    background-color: white;
+    /* background-image: url('/assets/images/arrowdown.png'); */
+    background-repeat: no-repeat;
+    background-position: right center;
+    cursor: pointer;
+  }
+  
+  .combobox.open select {
+    /* background-image: url('path/to/arrow-up-icon.png'); */
+  }
+  
+  .combobox select::-ms-expand {
+    display: none;
+  }
+  
+  /* Styling the dropdown arrow icon */
+  .combobox select option {
+    background-color: white;
+    color: #333;
+  }
+  
+  /* Styling the dropdown list */
+  .combobox select option:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .combobox::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa;
+  }
+
+  .prev{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  color: #007BFF;
+  }  
+
+
+
+
+
+
+
+  .flash-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  .flash-list {
+    display: flex;
+    display: block;
+
+  }
+  .flash-item {
+    padding: 40px;
+    background-color: white;
+    margin: 0 25px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.025);
+    text-align: center;
+    position: relative;
+    max-width: 300px;
+  }
+  .flash-title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .flash-description {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .flash-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 65px auto;
+    border: 2px solid currentColor;
+    font-size: 55px;
+  }
+  .btn {
+    display: block;
+    padding: 20px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .flash-icon-close {
+    color: #ccc;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  .flash-item--success .flash-icon {
+    color: #5eca52;
+  }
+  .btn--continue {
+    background-color: #5eca52;
+    color: white;
+  }
+  .flash-item--danger {
+    background-color: rgba(232, 89, 76, 0.9);
+    color: white;
+  }
+  .btn--try-again {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+  }
+  .flash-item--danger .flash-icon-close {
+    color: white;
+  }
+
+  .offre:hover{
+    filter: brightness(120%);
+    cursor: pointer;
+
+  }
